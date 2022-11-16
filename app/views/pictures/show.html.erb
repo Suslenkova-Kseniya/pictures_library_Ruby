@@ -1,8 +1,27 @@
-<h1>Show picture details</h1>
+<div id="page-content">
+  <h2 class="text-center mt-4"><%= @picture.title %></h2>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="shadow mb-5 bg-body rounded">
+          <div class="card text-center">
+            <div class="card-header fst-italic">
+              by Kseniya
+            </div>
+            <div class="card-body">
+              <div class="card-text"><%= simple_format(@picture.description) %></div>
+              <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(@picture),  class: "text-reset text-decoration-none" %></button>
+              <button class="btn btn-outline-danger"><%= link_to 'Delete', @picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(@picture.created_at) %> ago,
+                edited <%= time_ago_in_words(@picture.updated_at) %> ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p><strong>Title: </strong><%= @picture.title%></p>
-<p><strong>Description: </strong><%= @picture.description%></p>
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Delete', @picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %> |
-<%= link_to 'Return to pictures listing', pictures_path %>
