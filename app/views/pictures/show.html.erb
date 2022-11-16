@@ -1,0 +1,8 @@
+<h1>Show picture details</h1>
+
+<p><strong>Title: </strong><%= @picture.title%></p>
+<p><strong>Description: </strong><%= @picture.description%></p>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Delete', @picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %> |
+<%= link_to 'Return to pictures listing', pictures_path %>
