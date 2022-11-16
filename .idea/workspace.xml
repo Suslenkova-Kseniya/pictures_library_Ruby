@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47b74b7b-0974-4fe7-8955-ca0513768fa1" name="Changes" comment="">
+    <list default="true" id="47b74b7b-0974-4fe7-8955-ca0513768fa1" name="Changes" comment="Changes in views and build bootstrap show page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.bootstrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/about.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/about.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pictures/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pictures/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pictures/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,8 +91,16 @@
       <option name="presentableId" value="Default" />
       <updated>1668605496154</updated>
       <workItem from="1668605497308" duration="1505000" />
-      <workItem from="1668607072155" duration="8258000" />
+      <workItem from="1668607072155" duration="9940000" />
     </task>
+    <task id="LOCAL-00001" summary="Changes in views and build bootstrap show page">
+      <created>1668620275770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668620275770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,5 +116,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes in views and build bootstrap show page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in views and build bootstrap show page" />
   </component>
 </project>

@@ -1,31 +1,30 @@
-<div id="page-content">
-  <h1 class="text-center mt-4">Listing all pictures</h1>
-  <div class="container">
-    <% @pictures.each do |picture| %>
-      <div class="row justify-content-md-center">
-        <div class="col-8 mt-4">
-          <div class="shadow mb-5 bg-body rounded">
-            <div class="card text-center">
-              <div class="card-header fst-italic">
-                by Kseniya
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><%= link_to picture.title, picture_path(picture), class: "text-success"%></h5>
-                <p class="card-text"><%= truncate(picture.description, length: 100) %></p>
-                <button class="btn btn-outline-success"><%= link_to 'Show', picture, class: "text-reset text-decoration-none" %></button>
-                <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(picture),  class: "text-reset text-decoration-none" %></button>
-                <button class="btn btn-outline-danger"><%= link_to 'Delete', picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
-              </div>
-              <div class="card-footer text-muted">
-                <small>Created <%= time_ago_in_words(picture.created_at) %> ago,
-                  edited <%= time_ago_in_words(picture.updated_at) %> ago</small>
-              </div>
+<h1 class="text-center mt-4">Listing all pictures</h1>
+
+<div class="container">
+  <% @pictures.each do |picture| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="shadow mb-5 bg-body rounded">
+          <div class="card text-center">
+            <div class="card-header fst-italic">
+              by Kseniya
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to picture.title, picture_path(picture), class: "text-success"%></h5>
+              <p class="card-text"><%= truncate(picture.description, length: 100) %></p>
+              <button class="btn btn-outline-success"><%= link_to 'Show', picture, class: "text-reset text-decoration-none" %></button>
+              <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(picture),  class: "text-reset text-decoration-none" %></button>
+              <button class="btn btn-outline-danger"><%= link_to 'Delete', picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(picture.created_at) %> ago,
+                edited <%= time_ago_in_words(picture.updated_at) %> ago</small>
             </div>
           </div>
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
 
