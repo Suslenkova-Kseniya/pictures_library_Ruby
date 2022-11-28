@@ -4,6 +4,9 @@
   <div class="text-center mt-4">
     <%= link_to "Edit Account", edit_user_registration_path, class: "btn btn-outline-info" %>
   </div>
+  <div class="text-center mt-4">
+    <%= link_to "Add pictures to collection", edit_user_path, class: "btn btn-outline-info" %>
+  </div>
 <% end %>
 
 <h3 class="text-center mt-4">Pictures</h3>
@@ -24,7 +27,7 @@
               <h5 class="card-title"><%= link_to picture.title, picture_path(picture), class: "text-success"%></h5>
               <p class="card-text"><%= truncate(picture.description, length: 100) %></p>
               <button class="btn btn-outline-success"><%= link_to 'View', picture, class: "text-reset text-decoration-none" %></button>
-              <% if user_signed_in? && current_user.admin? %>
+              <% if user_signed_in? && (current_user.admin? || (picture.users.include? current_user)) %>
                 <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(picture),  class: "text-reset text-decoration-none" %></button>
                 <button class="btn btn-outline-danger"><%= link_to 'Delete', picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
               <% end %>
@@ -38,4 +41,7 @@
       </div>
     </div>
   <% end %>
+  <div class="mt-4 text-center">
+    <%= link_to "Back", :back %>
+  </div>
 </div>

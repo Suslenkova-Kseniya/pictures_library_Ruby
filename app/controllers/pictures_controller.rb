@@ -3,7 +3,12 @@ class PicturesController < ApplicationController
   def show
   end
   def index
-    @pictures = Picture.all
+    if current_user.admin?
+      @pictures = Picture.all
+    else
+      flash[:alert] = "Only admin can see all users"
+      redirect_to current_user
+    end
   end
   def new
     @picture = Picture.new

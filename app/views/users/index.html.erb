@@ -1,5 +1,9 @@
 <h1 class="text-center mt-4">Users</h1>
 
+<div class="text-center mt-4">
+  <%= link_to "Create new user", new_user_path, class: "btn btn-outline-info" %>
+</div>
+
 <div class="container">
   <% @users.each do |user| %>
     <div class="row justify-content-md-center">
@@ -10,13 +14,9 @@
               <%= link_to user.username, user%>
             </div>
             <div class="card-body">
-<!--              <p class="card-text"><%#= pluralize(user.articles.count, "article") %></p>-->
+              <p class="card-text"><%= pluralize(user.pictures.count, "picture") %></p>
               <button class="btn btn-outline-success"><%= link_to 'View profile', user, class: "text-reset text-decoration-none" %></button>
-              <% if user_signed_in? %>
-                <% if user == current_user || current_user.admin? %>
-                  <button class="btn btn-outline-primary"><%= link_to 'Edit profile', edit_user_registration_path(user),  class: "text-reset text-decoration-none" %></button>
-                <% end %>
-              <% end %>
+              <button class="btn btn-outline-primary"><%= link_to 'Edit profile', edit_user_registration_path(user),  class: "text-reset text-decoration-none" %></button>
             </div>
             <div class="card-footer text-muted">
               <small>Joined <%= time_ago_in_words(user.created_at) %> ago</small>
@@ -27,3 +27,4 @@
     </div>
   <% end %>
 </div>
+

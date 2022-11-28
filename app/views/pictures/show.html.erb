@@ -13,14 +13,19 @@
           <% end %>
           <div class="card-body">
             <div class="card-text"><%= simple_format(@picture.description) %></div>
-            <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(@picture),  class: "text-reset text-decoration-none" %></button>
-            <button class="btn btn-outline-danger"><%= link_to 'Delete', @picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
+            <% if user_signed_in? && (current_user.admin? || (@picture.users.include?(current_user))) %>
+              <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(@picture),  class: "text-reset text-decoration-none" %></button>
+              <button class="btn btn-outline-danger"><%= link_to 'Delete', @picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
+            <% end %>
           </div>
           <div class="card-footer text-muted">
             <small>Created <%= time_ago_in_words(@picture.created_at) %> ago,
               edited <%= time_ago_in_words(@picture.updated_at) %> ago</small>
           </div>
         </div>
+      </div>
+      <div class="mt-4 text-center">
+        <%= link_to "Back", :back %>
       </div>
     </div>
   </div>

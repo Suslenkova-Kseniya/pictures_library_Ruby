@@ -1,0 +1,47 @@
+<h2 class="text-center mt-4">Sign up</h2>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= render 'shared/errors', obj: @user %>
+      <%#= render "devise/shared/error_messages", resource: resource %>
+      <%= form_with(method: 'POST', url: "/users/new", class: "shadow p-3 mb-3 bg-info rounded", local: true, data: {turbo: false})  do |f| %>
+
+        <div class="form-group row">
+          <%= f.label :username, class: "col-2 col-form-label text-light"%>
+          <div class="col-10">
+            <%= f.text_field :username, autofocus: true, class: "form-control shadow rounded", placeholder: "Enter a username"%>
+          </div>
+        </div>
+
+        <div class="form-group row mt-4">
+          <%= f.label :email, class: "col-2 col-form-label text-light"%>
+          <div class="col-10">
+            <%= f.email_field :email, autofocus: true,  autocomplete: "email", class: "form-control shadow rounded"%>
+          </div>
+        </div>
+
+        <div class="form-group row mt-4">
+          <div class="col-2 col-form-label text-light">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+          </div>
+          <div class="col-10">
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control shadow rounded"%>
+          </div>
+        </div>
+
+        <div class="row mt-4 justify-content-center">
+          <div class="col-2">
+            <%= f.submit "Sign up" , class: "btn btn-outline-light btn-log" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="mt-4 text-center">
+      <%= link_to "Back", :back %>
+    </div>
+  </div>
+</div>
