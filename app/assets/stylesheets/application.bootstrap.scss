@@ -1,22 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-.navbar {
-  background-color: black !important;
-}
-
-.nav-link {
-  color: white !important;
-}
-
-.navbar-toggler-icon {
-  background-color: white;
-}
-
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
