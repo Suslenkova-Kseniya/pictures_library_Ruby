@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_in, keys: [:username])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
   end
+
+  def after_sign_in_path_for(resource)
+    if !current_user.admin?
+      user_path(current_user)
+    else
+      users_path
+    end
+  end
 end

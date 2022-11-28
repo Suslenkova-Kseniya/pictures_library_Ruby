@@ -6,38 +6,33 @@
   </div>
 <% end %>
 
-<h3 class="text-center mt-4">Articles</h3>
+<h3 class="text-center mt-4">Pictures</h3>
 
-<!--<div class="container">-->
-  <%# @user.pictures.each do |article| %>
-<!--    <div class="row justify-content-md-center">-->
-<!--      <div class="col-8 mt-4">-->
-<!--        <div class="shadow mb-5 bg-body rounded">-->
-<!--          <div class="card text-center">-->
-<!--            <div class="card-header fst-italic">-->
-              <%# if article.user %>
-<!--                by <%#= link_to article.user.username, user_path(article.user)%>-->
-              <%# end %>
-              <%# if article.categories.any? %>
-<!--                <div class="mt-2"><%#= render article.categories %></div>-->
-              <%# end %>
-<!--            </div>-->
-<!--            <div class="card-body">-->
-<!--              <h5 class="card-title"><%#= link_to article.title, article_path(article), class: "text-success"%></h5>-->
-<!--              <p class="card-text"><%#= truncate(article.description, length: 100) %></p>-->
-<!--              <button class="btn btn-outline-success"><%#= link_to 'View', article, class: "text-reset text-decoration-none" %></button>-->
-              <%# if logged_in? && (article.user == current_user || current_user.admin?) %>
-<!--                <button class="btn btn-outline-primary"><%#= link_to 'Edit', edit_article_path(article),  class: "text-reset text-decoration-none" %></button>-->
-<!--                <button class="btn btn-outline-danger"><%#= link_to 'Delete', article, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>-->
-              <%# end %>
-<!--            </div>-->
-<!--            <div class="card-footer text-muted">-->
-<!--              <small>Created <%#= time_ago_in_words(article.created_at) %> ago,-->
-<!--                edited <%#= time_ago_in_words(article.updated_at) %> ago</small>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-  <%# end %>
-<!--</div>-->
+<div class="container">
+  <% @user.pictures.each do |picture| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="shadow mb-5 bg-body rounded">
+          <div class="card text-center">
+            <div class="card-header fst-italic">
+              by <%= link_to @user.username, user_path(@user)%>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to picture.title, picture_path(picture), class: "text-success"%></h5>
+              <p class="card-text"><%= truncate(picture.description, length: 100) %></p>
+              <button class="btn btn-outline-success"><%= link_to 'View', picture, class: "text-reset text-decoration-none" %></button>
+              <% if user_signed_in? && current_user.admin? %>
+                <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(picture),  class: "text-reset text-decoration-none" %></button>
+                <button class="btn btn-outline-danger"><%= link_to 'Delete', picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
+              <% end %>
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(picture.created_at) %> ago,
+                edited <%= time_ago_in_words(picture.updated_at) %> ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
