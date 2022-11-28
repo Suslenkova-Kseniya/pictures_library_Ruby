@@ -14,9 +14,12 @@
       <div class="col-8 mt-4">
         <div class="shadow mb-5 bg-body rounded">
           <div class="card text-center">
-            <div class="card-header fst-italic">
-              by <%= link_to @user.username, user_path(@user)%>
-            </div>
+            <% if picture.users.any? %>
+              <div class="card-header fst-italic">
+                Used by:
+                <div class="mt-2"><%= render picture.users %></div>
+              </div>
+            <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= link_to picture.title, picture_path(picture), class: "text-success"%></h5>
               <p class="card-text"><%= truncate(picture.description, length: 100) %></p>
