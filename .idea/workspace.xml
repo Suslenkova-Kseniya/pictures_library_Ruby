@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47b74b7b-0974-4fe7-8955-ca0513768fa1" name="Changes" comment="Add restrictions, clear html pages, navigation">
-      <change beforePath="$PROJECT_DIR$/.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myapp.iml" afterDir="false" />
+    <list default="true" id="47b74b7b-0974-4fe7-8955-ca0513768fa1" name="Changes" comment="Update picture deletion, add create_user function for admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/pictures_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pictures_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +93,7 @@
       <workItem from="1668605497308" duration="1505000" />
       <workItem from="1668607072155" duration="9940000" />
       <workItem from="1669714575134" duration="1085000" />
-      <workItem from="1670506660487" duration="8594000" />
+      <workItem from="1670506660487" duration="9419000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in views and build bootstrap show page">
       <created>1668620275770</created>
@@ -154,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669659497516</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update picture deletion, add create_user function for admin">
+      <created>1670517217785</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670517217785</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +185,7 @@
     <MESSAGE value="Add different redirections depends on admin or user" />
     <MESSAGE value="Add user-pictures and picrures-users links in show and index pages" />
     <MESSAGE value="Add restrictions, clear html pages, navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add restrictions, clear html pages, navigation" />
+    <MESSAGE value="Update picture deletion, add create_user function for admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update picture deletion, add create_user function for admin" />
   </component>
 </project>
