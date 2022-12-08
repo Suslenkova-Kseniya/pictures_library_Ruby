@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47b74b7b-0974-4fe7-8955-ca0513768fa1" name="Changes" comment="Changes in views and build bootstrap show page">
+    <list default="true" id="47b74b7b-0974-4fe7-8955-ca0513768fa1" name="Changes" comment="Add restrictions, clear html pages, navigation">
+      <change beforePath="$PROJECT_DIR$/.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myapp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.bootstrap.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pictures/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pictures/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pictures_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pictures_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/assets/stylesheets/application.bootstrap.scss" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,20 +38,22 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/justuser/rails_projects/myapp/app/controllers&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/justuser/rails_projects/myapp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ruby.rails.projectView.checked": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/controllers" />
@@ -92,6 +95,8 @@
       <updated>1668605496154</updated>
       <workItem from="1668605497308" duration="1505000" />
       <workItem from="1668607072155" duration="9940000" />
+      <workItem from="1669714575134" duration="1085000" />
+      <workItem from="1670506660487" duration="8594000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in views and build bootstrap show page">
       <created>1668620275770</created>
@@ -100,7 +105,56 @@
       <option name="project" value="LOCAL" />
       <updated>1668620275770</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add devise authentication">
+      <created>1669629051349</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669629051349</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Visual changes">
+      <created>1669633024502</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669633024502</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add username validations, users index page">
+      <created>1669643290342</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669643290342</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add many-to-many association between users and pictures">
+      <created>1669644051593</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669644051593</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add different redirections depends on admin or user">
+      <created>1669645882148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645882148</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add user-pictures and picrures-users links in show and index pages">
+      <created>1669646676625</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669646676625</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add restrictions, clear html pages, navigation">
+      <created>1669659497516</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669659497516</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +173,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes in views and build bootstrap show page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in views and build bootstrap show page" />
+    <MESSAGE value="Clean up layout" />
+    <MESSAGE value="Add devise authentication" />
+    <MESSAGE value="Visual changes" />
+    <MESSAGE value="Add username validations, users index page" />
+    <MESSAGE value="Add many-to-many association between users and pictures" />
+    <MESSAGE value="Add different redirections depends on admin or user" />
+    <MESSAGE value="Add user-pictures and picrures-users links in show and index pages" />
+    <MESSAGE value="Add restrictions, clear html pages, navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add restrictions, clear html pages, navigation" />
   </component>
 </project>

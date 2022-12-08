@@ -30,7 +30,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if pic_params.count <= 3
+    @count = 2
+    @num = pic_params.dig(:picture_ids, 1)
+    while @num != nil
+      @num = pic_params.dig(:picture_ids, @count)
+      @count += 1
+    end
+    if @count <= 5
       if @user.update(pic_params)
         flash[:notice] = "Picture collection was updated successfully."
         redirect_to @user
@@ -39,11 +45,12 @@ class UsersController < ApplicationController
       end
     else
       flash[:alert] = "You can choose only 3 pictures"
-      redirect_to 'edit'
+      render 'edit'
     end
   end
 
   def create
+    debugger
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "#{@user.username} was successfully sign up"
@@ -59,7 +66,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email)
-
+    params.permit(:username, :email, :password)
   end
 end

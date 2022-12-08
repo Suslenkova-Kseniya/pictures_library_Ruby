@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   resources :pictures
   resources :users, except: [:destroy]
-  # post 'users/new', to: 'users#create'
+  post 'users/new', to: 'users#create'
 end

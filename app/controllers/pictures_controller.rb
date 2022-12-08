@@ -35,8 +35,11 @@ class PicturesController < ApplicationController
     end
   end
   def destroy
-    @picture.destroy
-    redirect_to pictures_path
+    @user = current_user
+    @record = UserPicture.where(user_id: @user.id, picture_id: @picture.id).first
+    # debugger(do: "info")
+    @record.destroy
+    redirect_to user_path
   end
 
   private
