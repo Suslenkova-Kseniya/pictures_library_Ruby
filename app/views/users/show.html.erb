@@ -30,9 +30,12 @@
               <% if user_signed_in? && (current_user.admin? || (picture.users.include? current_user)) %>
                 <button class="btn btn-outline-primary"><%= link_to 'Edit', edit_picture_path(picture),  class: "text-reset text-decoration-none" %></button>
                 <button class="btn btn-outline-danger"><%= link_to 'Delete', picture, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: "text-reset text-decoration-none" %></button>
-              <% end %>
+            <% end %>
             </div>
             <div class="card-footer text-muted">
+              <% if !UserPicture.where(user_id: @user.id, picture_id: picture.id).first.icon %>
+              <button class="btn btn-outline-warning"><%= link_to 'Make the picture as an icon', icon_path(picture), data: { turbo_method: :put }, class: "text-reset text-decoration-none" %></button><br/>
+              <% end %>
               <small>Created <%= time_ago_in_words(picture.created_at) %> ago,
                 edited <%= time_ago_in_words(picture.updated_at) %> ago</small>
             </div>

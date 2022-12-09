@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @pics = UserPicture.where(user_id: @user.id)
     if !(current_user.admin? || @user == current_user)
       flash[:alert] = "Only admin can see other users"
       redirect_to current_user

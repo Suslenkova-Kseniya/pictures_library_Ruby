@@ -19,6 +19,7 @@
             <ul class="dropdown-menu">
               <li><%= link_to "Create new picture", new_picture_path, class: "dropdown-item"%></li>
               <% if current_user.admin? %>
+                <li><%= link_to "View my pictures", user_path(current_user), class: "dropdown-item"%>
                 <li><%= link_to "View all pictures", pictures_path, class: "dropdown-item"%></li>
               <% else %>
                 <li><%= link_to "View my pictures", user_path(current_user), class: "dropdown-item"%>

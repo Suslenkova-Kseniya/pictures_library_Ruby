@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :set_picture, only: [:show, :edit, :update, :destroy, :icon]
   def show
   end
   def index
@@ -45,6 +45,20 @@ class PicturesController < ApplicationController
       @picture.destroy
       redirect_to pictures_path
     end
+  end
+  def icon
+    @user = current_user
+    @pics = UserPicture.where(user_id: @user.id)
+    @pics.each do |pic|
+      pic.icon = false if pic.icon
+      pic.save
+    end
+    @record = UserPicture.where(user_id: @user.id, picture_id: @picture.id).first
+    @record.icon = true
+    if @record.save
+      flash[:notice] = "Icon was set successfully."
+    end
+    redirect_to user_path
   end
 
   private

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :pictures
   resources :users, except: [:destroy]
   post 'users/new', to: 'users#create'
+  get 'pictures/icon/:id', to: 'pictures#show'
+  put 'pictures/icon/:id', to: 'pictures#icon', as: 'icon'
 end
